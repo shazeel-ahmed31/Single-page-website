@@ -1,2 +1,2 @@
 # Single-page-website
-This is an interactive single-page website built with HTML, CSS (using CSS variables), and JavaScript.
+This is an interactive single-page website built with HTML, CSS (using CSS variables), and JavaScript. It features a theme switcher that allows users to toggle between light and dark modes. The selected theme is saved using localStorage, so the user's preference is remembered even after refreshing or revisiting the page. The layout is fully responsive and designed for a smooth user experience.
