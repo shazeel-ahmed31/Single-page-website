@@ -1,8 +1,8 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "single-page-theme-demo",
   "private": true,
   "scripts": {
-    "build": "echo 'no build script'"
+    "check": "node --check script.js && node --check theme-state.js",
+    "test": "node --test --experimental-test-isolation=none tests/*.test.cjs"
   }
 }

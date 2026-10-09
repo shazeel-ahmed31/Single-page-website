@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InnovateCorp - Digital Solutions for Modern Business</title>
+    <title>InnovateCorp — Frontend Theme Demo</title>
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,12 +12,13 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <a class="skip-link" href="#home">Skip to content</a>
+    <nav class="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-brand">
                 <h2>InnovateCorp</h2>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -25,43 +27,45 @@
             </ul>
             <div class="nav-actions">
                 <div class="theme-toggle-nav">
-                    <div class="toggle-switch" id="themeToggle">
-                        <div class="toggle-slider"></div>
-                    </div>
+                    <button type="button" class="toggle-switch" id="themeToggle" role="switch" aria-label="Dark theme" aria-checked="false">
+                        <span class="toggle-slider" aria-hidden="true"></span>
+                    </button>
                 </div>
-                <button class="btn btn-primary">Get Started</button>
+                <a class="btn btn-primary" href="#contact">Get Started</a>
             </div>
-            <div class="hamburger" id="hamburger">
+            <button type="button" class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="navMenu" aria-expanded="false" hidden>
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
+    <main>
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
+                    <p class="demo-note">Fictional business website · frontend demonstration</p>
                     <h1>Transform Your Business with Digital Innovation</h1>
                     <p>We help companies scale and succeed through cutting-edge technology solutions, strategic consulting, and innovative digital transformation.</p>
                     <div class="hero-buttons">
-                        <button class="btn btn-primary btn-large">Start Your Journey</button>
-                        <button class="btn btn-secondary btn-large">Learn More</button>
+                        <a class="btn btn-primary btn-large" href="#contact">Start Your Journey</a>
+                        <a class="btn btn-secondary btn-large" href="#about">Learn More</a>
                     </div>
                     <div class="hero-stats">
                         <div class="stat">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Projects Completed</span>
+                            <span class="stat-number">Demo</span>
+                            <span class="stat-label">Project layout</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">98%</span>
-                            <span class="stat-label">Client Satisfaction</span>
+                            <span class="stat-number">UI</span>
+                            <span class="stat-label">Theme controls</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Support Available</span>
+                            <span class="stat-number">Local</span>
+                            <span class="stat-label">Browser interaction</span>
                         </div>
                     </div>
                 </div>
@@ -87,19 +91,19 @@
                     <div class="service-icon">💼</div>
                     <h3>Business Consulting</h3>
                     <p>Strategic guidance to optimize your operations and drive sustainable growth through data-driven insights.</p>
-                    <a href="#" class="service-link">Learn More →</a>
+                    <a href="#contact" class="service-link">Learn More →</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">⚡</div>
                     <h3>Digital Transformation</h3>
                     <p>Modernize your infrastructure with cloud solutions, automation, and cutting-edge technology integration.</p>
-                    <a href="#" class="service-link">Learn More →</a>
+                    <a href="#contact" class="service-link">Learn More →</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📊</div>
                     <h3>Data Analytics</h3>
                     <p>Unlock valuable insights from your data to make informed decisions and stay ahead of the competition.</p>
-                    <a href="#" class="service-link">Learn More →</a>
+                    <a href="#contact" class="service-link">Learn More →</a>
                 </div>
                 
             </div>
@@ -112,7 +116,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>About InnovateCorp</h2>
-                    <p>With over a decade of experience in digital transformation, we've helped hundreds of businesses achieve their goals through innovative technology solutions.</p>
+                    <p>InnovateCorp is a fictional brand used to demonstrate responsive sections, CSS theme variables and browser interactions. Service and pricing copy is sample content, not a commercial offer.</p>
                     <div class="about-features">
                         <div class="feature">
                             <span class="feature-icon">✓</span>
@@ -165,10 +169,10 @@
                         <li>Monthly reports</li>
                         <li>Up to 5 users</li>
                     </ul>
-                    <button class="btn btn-outline">Get Started</button>
+                    <a class="btn btn-outline" href="#contact">Get Started</a>
                 </div>
                 <div class="pricing-card featured">
-                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-badge">Sample Plan</div>
                     <div class="pricing-header">
                         <h3>Professional</h3>
                         <div class="price">
@@ -184,7 +188,7 @@
                         <li>Up to 25 users</li>
                         <li>Custom integrations</li>
                     </ul>
-                    <button class="btn btn-primary">Get Started</button>
+                    <a class="btn btn-primary" href="#contact">Get Started</a>
                 </div>
                 <div class="pricing-card">
                     <div class="pricing-header">
@@ -202,7 +206,7 @@
                         <li>Unlimited users</li>
                         <li>White-label options</li>
                     </ul>
-                    <button class="btn btn-outline">Contact Sales</button>
+                    <a class="btn btn-outline" href="#contact">Contact Sales</a>
                 </div>
             </div>
         </div>
@@ -220,46 +224,50 @@
                             <span class="contact-icon">📧</span>
                             <div>
                                 <strong>Email</strong>
-                                <p>hello@innovatecorp.com</p>
+                                <p>hello@example.com</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📞</span>
                             <div>
                                 <strong>Phone</strong>
-                                <p>+1 (555) 123-4567</p>
+                                <p>Sample phone — not callable</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
                             <div>
                                 <strong>Address</strong>
-                                <p>123 Business Ave, Suite 100<br>New York, NY 10001</p>
+                                <p>Illustrative address — no real office</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <p>Demo form: no message is sent or stored. Use sample information.</p>
+                    <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" id="contactName" aria-label="Your name" maxlength="100" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" id="contactEmail" aria-label="Your email" maxlength="254" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Company Name">
+                            <input type="text" id="contactCompany" aria-label="Company name" maxlength="100" placeholder="Company Name">
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Tell us about your project" rows="5" required></textarea>
+                            <textarea id="contactMessage" aria-label="Message" maxlength="2000" placeholder="Tell us about your project" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn-full">Try demo form</button>
+                        <p id="formStatus" role="status"></p>
+                        <noscript>This form requires JavaScript and does not send messages.</noscript>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    </main>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -271,32 +279,32 @@
                 <div class="footer-section">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="#">Business Consulting</a></li>
-                        <li><a href="#">Digital Transformation</a></li>
-                        <li><a href="#">Data Analytics</a></li>
-                        <li><a href="#">Cybersecurity</a></li>
+                        <li><a href="#services">Business Consulting</a></li>
+                        <li><a href="#services">Digital Transformation</a></li>
+                        <li><a href="#services">Data Analytics</a></li>
+                        
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        
+                        
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Legal</h4>
+                    <h4>Demo notice</h4><p>Fictional content. No service purchase, contact delivery or account is provided.</p>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
+                        
+                        
+                        
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 InnovateCorp. All rights reserved.</p>
+                <p>InnovateCorp · Fictional frontend demonstration</p>
                 <div class="theme-indicator">
                     <span id="themeStatus">🌙 Dark Mode</span>
                 </div>
@@ -304,6 +312,7 @@
         </div>
     </footer>
 
+    <script src="theme-state.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
