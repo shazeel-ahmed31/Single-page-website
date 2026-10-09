@@ -1,0 +1,5 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const {createThemeState}=require('../theme-state');
+function storage(saved){const values=new Map(saved?[['business-theme',saved]]:[]);return {values,getItem:k=>values.get(k),setItem:(k,v)=>values.set(k,v)};}
+test('system initialization does not create a saved override',()=>{const s=storage();const t=createThemeState(s,true);assert.equal(t.theme,'dark');assert.equal(s.values.size,0);assert.equal(t.systemChanged(false),'light');});
+test('explicit selection persists and takes priority over system changes',()=>{const s=storage();const t=createThemeState(s,false);t.choose('dark');assert.equal(s.values.get('business-theme'),'dark');assert.equal(t.systemChanged(false),'dark');assert.equal(createThemeState(s,false).theme,'dark');});
+test('invalid saved themes and unavailable storage are safe',()=>{assert.equal(createThemeState(storage('bad'),true).theme,'dark');const t=createThemeState({getItem(){throw Error();},setItem(){throw Error();}},false);assert.equal(t.choose('dark'),'dark');assert.equal(t.storageUnavailable,true);assert.throws(()=>t.choose('bad'));});
